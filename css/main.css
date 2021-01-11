@@ -1,0 +1,93 @@
+body {
+  font-size: 18px;
+  font-family: "Bai Jamjuree", "Helvetica neue", Helvetica;
+  color: #9fabb2;
+  font-weight: 400;
+  background: url("../images/bg-header-desktop.png") no-repeat;
+}
+
+h1, h2, h3, h6 {
+  font-weight: 600;
+  color: #4c545d;
+}
+
+h4, h5 {
+  font-weight: 400;
+}
+
+img {
+  display: block;
+}
+
+.download {
+  display: flex;
+  width: 45%;
+}
+.download__link {
+  width: 50%;
+}
+.download__link__btn {
+  padding: 1.25rem;
+  border-radius: 2rem;
+  background-color: aliceblue;
+  border: none;
+}
+
+.container {
+  text-align: center;
+}
+.container img {
+  margin: 0 auto;
+}
+.container__header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20%;
+}
+.container__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.container__info__snippets {
+  margin: 0 20%;
+}
+.container__info .cards {
+  margin: 0 10%;
+  width: 30%;
+  text-align: initial;
+}
+.container__feat {
+  margin: 0 20%;
+}
+.container__char__info {
+  margin: 0 20%;
+}
+.container__char .cards {
+  display: flex;
+  margin: 0 10%;
+}
+.container__char .cards__card {
+  width: 30%;
+  padding: 0 1.66%;
+}
+.container__companies {
+  display: flex;
+  margin: 0 10%;
+}
+.container__companies__img {
+  width: 20%;
+}
+.container__download {
+  margin: 0 20%;
+}
+
+.footer {
+  color: #4c545d;
+  background-color: #9fabb2;
+}
+
+/*# sourceMappingURL=main.css.map */
