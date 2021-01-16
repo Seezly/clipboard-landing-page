@@ -1,3 +1,5 @@
+@import "animation";
+
 h1, h2, h3, h6 {
     font-weight: $bold;
     color: $dBlue;
@@ -7,22 +9,69 @@ h4, h5 {
     font-weight: $light;
 }
 
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1.125em;
+}
+
 img {
     display: block;
 }
 
 .download {
     display: flex;
-    width: 45%;
+    width: 60%;
+    margin-top: 2.5em;
 
     &__link {
         width: 50%;
 
         &__btn {
-            padding: 1.25rem;
+            font-size: 1em;
+            padding: 1em 1.5em;
             border-radius: 2rem;
-            background-color: rgb(240 248 255);
+            color: white;
             border: none;
+            cursor: pointer;
+            font-weight: $bold;
+        }
+
+        &__btn--cyan {
+            background-color: $cyan;
+            box-shadow: 0em 0.1388em 0em 0.0277em hsl(171 66% 34% / 1), 0em 0.83em 0.83em 0em hsl(171 66% 34% / 0.25);
+            
+            @include transition(0.5s);
+        }
+
+        &__btn--lblue {
+            background-color: $lBlue;
+            box-shadow: 0em 0.1388em 0em 0.0277em hsl(233 100% 59% / 1), 0em 0.83em 0.83em 0em hsl(233 100% 59% / 0.25);
+            
+            @include transition(0.5s);
+        }
+
+        &__btn--cyan:hover {
+            background-color: hsl(171 66% 49% / 1);
+            
+            @include transition(0.5s);
+        }
+
+        &__btn--lblue:hover {
+            background-color: hsl(233 100% 74% / 1);
+            
+            @include transition(0.5s);
         }
     }
 }
@@ -39,50 +88,96 @@ img {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin: 0 20%;
+        margin: 7.5em 20% 0 20%;
+
+        &__logo {
+            margin-bottom: 2.5em;
+        }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        background: url('../images/image-computer.png') -7.5% 100% no-repeat;
 
         &__snippets {
-            margin: 0 20%;
+            margin: 0 25% 2.5em 25%;
         }
 
         .cards {
-            margin: 0 10%;
-            width: 30%;
+            margin: 5em 10%;
+            width: 27.5%;
             text-align: initial;
+
+            &__card {
+                margin-bottom: 2.75em;
+            }
         }
     }
 
     &__feat {
-        margin: 0 20%;
+        margin: 7.5em 0;
+
+        &__info {
+            margin: 0 25%;
+        }
+
+        &__img {
+            margin-top: 5em;
+        }
     }
 
     &__char {
 
         &__info {
-            margin: 0 20%;
+            margin: 0 25%;
+            margin-bottom: 2em;
         }
 
         .cards {
             display: flex;
             margin: 0 10%;
+            justify-content: space-between;
 
             &__card {
                 width: 30%;
                 padding: 0 1.66%;
+
+                .blacklist {
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin: 2em auto;
+                    background: url('../images/icon-blacklist.svg') center center no-repeat;
+                    background-size: contain;
+                }
+
+                .snippets {
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin: 2em auto;
+                    background: url('../images/icon-text.svg') center center no-repeat;
+                    background-size: contain;
+                }
+
+                .sneak {
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin: 2em auto;
+                    background: url('../images/icon-preview.svg') center center no-repeat;
+                    background-size: contain;
+                }
+
+                h3 {
+                    margin-bottom: 0.75em;
+                }
             }
         }
     }
 
     &__companies {
         display: flex;
-        margin: 0 10%;
+        margin: 7.5em 0;
 
         &__img {
             width: 20%;
@@ -90,11 +185,66 @@ img {
     }
 
     &__download {
-        margin: 0 20%;
+        margin: 7.5em 25%;
+
+        .download {
+            width: 72.5%;
+            margin: auto;
+            margin-top: 2.5em;
+        }
     }
 }
 
 .footer {
+    display: flex;
     color: $dBlue;
-    background-color: $gBlue;
+    background-color: rgba($lBlue, $alpha: 0.1);
+    margin: auto;
+    height: 7.5em;
+
+    &__logo {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 30%;
+        }
+    }
+
+    &__menu {
+        width: 60%;
+        display: flex;
+
+        ul {
+            display: flex;
+            flex-flow: wrap;
+            padding: 0;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            list-style: none;
+
+            li {
+
+                a {
+                    text-decoration: none;
+                    color: $dBlue;
+
+                    @include transition(0.5s);
+                }
+
+                a:hover {
+                    color: $cyan;
+
+                    @include transition(0.5s);
+                }
+            }
+        }
+    }
+
+    &__social {
+        width: 15%;
+    }
 }
