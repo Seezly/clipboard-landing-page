@@ -110,6 +110,9 @@ img {
 .container__info__snippets {
   margin: 0 25% 2.5em 25%;
 }
+.container__info__img {
+  display: none;
+}
 .container__info .cards {
   margin: 5em 10%;
   width: 27.5%;
@@ -184,6 +187,7 @@ img {
   display: flex;
   color: #4c545d;
   background-color: rgba(97, 115, 255, 0.1);
+  justify-content: space-evenly;
   margin: auto;
   height: 7.5em;
 }
@@ -199,13 +203,13 @@ img {
 .footer__menu {
   width: 60%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer__menu ul {
   display: flex;
   flex-flow: wrap;
   padding: 0;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   list-style: none;
 }
@@ -225,7 +229,26 @@ img {
   -o-transition: all 0.5s;
 }
 .footer__social {
+  display: flex;
   width: 15%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer__social a {
+  text-decoration: none;
+  color: #4c545d;
+  font-size: 1.5em;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.footer__social a:hover {
+  color: #26baa4;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -262,8 +285,18 @@ img {
   .container__header__logo {
     margin: 0;
   }
+  .container__info {
+    background: none;
+  }
   .container__info__snippets {
     margin: 0 0 2.5em 0;
+  }
+  .container__info__img {
+    display: block;
+    background: url("../images/image-computer.png") center center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 20em;
   }
   .container__info .cards {
     width: 100%;
@@ -311,6 +344,10 @@ img {
   }
   .footer__menu ul li {
     padding: 0.5em 0;
+  }
+  .footer__social {
+    width: 100%;
+    margin-top: 1.5em;
   }
 }
 

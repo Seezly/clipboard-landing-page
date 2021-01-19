@@ -105,6 +105,10 @@ img {
             margin: 0 25% 2.5em 25%;
         }
 
+        &__img {
+            display: none;
+        }
+
         .cards {
             margin: 5em 10%;
             width: 27.5%;
@@ -199,6 +203,7 @@ img {
     display: flex;
     color: $dBlue;
     background-color: rgba($lBlue, $alpha: 0.1);
+    justify-content: space-evenly;
     margin: auto;
     height: 7.5em;
 
@@ -216,15 +221,16 @@ img {
     &__menu {
         width: 60%;
         display: flex;
+        justify-content: center;
+        align-items: center;
 
         ul {
-            display: flex;
-            flex-flow: wrap;
+            display: grid;
             padding: 0;
-            justify-content: space-between;
-            align-items: center;
             width: 100%;
             list-style: none;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
 
             li {
 
@@ -245,6 +251,23 @@ img {
     }
 
     &__social {
+        display: flex;
         width: 15%;
+        justify-content: space-evenly;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: $dBlue;
+            font-size: 1.5em;
+
+            @include transition(0.5s);
+        }
+
+        a:hover {
+            color: $cyan;
+
+            @include transition(0.5s);
+        }
     }
 }
