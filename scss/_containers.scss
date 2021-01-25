@@ -271,3 +271,17 @@ img {
         }
     }
 }
+
+.mentions {
+    color: $dBlue;
+    font-size: 75%;
+    text-align: center;
+
+    a {
+        color: $lBlue;
+    }
+
+    a:hover {
+        color: $cyan;
+    }
+}

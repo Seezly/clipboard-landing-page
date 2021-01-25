@@ -207,11 +207,12 @@ img {
   align-items: center;
 }
 .footer__menu ul {
-  display: flex;
-  flex-flow: wrap;
+  display: grid;
   padding: 0;
   width: 100%;
   list-style: none;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .footer__menu ul li a {
   text-decoration: none;
@@ -249,6 +250,18 @@ img {
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
+}
+
+.mentions {
+  color: #4c545d;
+  font-size: 75%;
+  text-align: center;
+}
+.mentions a {
+  color: #6173ff;
+}
+.mentions a:hover {
+  color: #26baa4;
 }
 
 @media screen and (max-width: 1200px) {
