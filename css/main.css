@@ -4,7 +4,7 @@ body {
   color: #9fabb2;
   font-weight: 400;
   line-height: 1.75em;
-  background: url("../images/bg-header-desktop.png") no-repeat;
+  background: url("../images/bg-header-desktop.png") white no-repeat;
 }
 
 h1, h2, h3, h6 {
