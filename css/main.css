@@ -5,6 +5,7 @@ body {
   font-weight: 400;
   line-height: 1.75em;
   background: url("../images/bg-header-desktop.png") white no-repeat;
+  background-size: contain;
 }
 
 h1, h2, h3, h6 {
